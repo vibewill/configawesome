@@ -1,0 +1,5 @@
+2021/01/26-10:21:43.804 737 Reusing MANIFEST /home/vibewill/.config/google-chrome/Default/IndexedDB/https_remotedesktop.google.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/01/26-10:22:16.080 4bc Level-0 table #5: started
+2021/01/26-10:22:16.124 4bc Level-0 table #5: 2209 bytes OK
+2021/01/26-10:22:16.182 4bc Delete type=0 #3
+2021/01/26-10:22:16.188 4bc Manual compaction at level-0 from (begin) .. (end); will stop at (end)

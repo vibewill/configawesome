@@ -1,0 +1,49 @@
+{
+   "app": {
+      "display_mode": "browser",
+      "launch": {
+         "web_url": "https://www3.olx.com.br/account/chat/"
+      },
+      "linked_icons": [ {
+         "size": 36,
+         "url": "https://static.olx.com.br/android-chrome-36x36.png"
+      }, {
+         "size": 48,
+         "url": "https://static.olx.com.br/android-chrome-48x48.png"
+      }, {
+         "size": 72,
+         "url": "https://static.olx.com.br/android-chrome-72x72.png"
+      }, {
+         "size": 96,
+         "url": "https://static.olx.com.br/android-chrome-96x96.png"
+      }, {
+         "size": 144,
+         "url": "https://static.olx.com.br/android-chrome-144x144.png"
+      }, {
+         "size": 192,
+         "url": "https://static.olx.com.br/android-chrome-192x192.png"
+      }, {
+         "size": 256,
+         "url": "https://static.olx.com.br/android-chrome-256x256.png"
+      }, {
+         "size": 384,
+         "url": "https://static.olx.com.br/android-chrome-384x384.png"
+      }, {
+         "size": 512,
+         "url": "https://static.olx.com.br/android-chrome-512x512.png"
+      } ],
+      "theme_color": "rgba(255,255,255,1)"
+   },
+   "description": "",
+   "icons": {
+      "128": "icons/128.png",
+      "256": "icons/256.png",
+      "32": "icons/32.png",
+      "48": "icons/48.png",
+      "64": "icons/64.png",
+      "96": "icons/96.png"
+   },
+   "key": "3mLNIOhzJFODdfDdv2K3laYeqWekX7C0r4pb/UBHhGI=",
+   "name": "olx",
+   "version": "2021.1.26.36488"
+}

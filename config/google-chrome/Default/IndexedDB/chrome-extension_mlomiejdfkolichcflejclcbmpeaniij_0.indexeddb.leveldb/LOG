@@ -1,0 +1,13 @@
+2021/01/26-19:52:16.583 9fe Reusing MANIFEST /home/vibewill/.config/google-chrome/Default/IndexedDB/chrome-extension_mlomiejdfkolichcflejclcbmpeaniij_0.indexeddb.leveldb/MANIFEST-000001
+2021/01/26-19:52:16.584 9fe Recovering log #16
+2021/01/26-19:52:16.810 9fe Reusing old log /home/vibewill/.config/google-chrome/Default/IndexedDB/chrome-extension_mlomiejdfkolichcflejclcbmpeaniij_0.indexeddb.leveldb/000016.log 
+2021/01/26-19:52:18.794 a09 Level-0 table #21: started
+2021/01/26-19:52:18.961 a09 Level-0 table #21: 88490 bytes OK
+2021/01/26-19:52:19.128 a09 Delete type=0 #16
+2021/01/26-19:52:19.147 a09 Manual compaction at level-0 from '\x00\x09\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x0a\x00\x00\x00' @ 0 : 0; will stop at (end)
+2021/01/26-19:56:18.661 9c2 Compacting 1@1 + 1@2 files
+2021/01/26-19:56:18.733 9c2 Generated table #22@1: 4147 keys, 321075 bytes
+2021/01/26-19:56:18.733 9c2 Compacted 1@1 + 1@2 files => 321075 bytes
+2021/01/26-19:56:18.762 9c2 compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/01/26-19:56:18.762 9c2 Delete type=2 #18
+2021/01/26-19:56:18.762 9c2 Delete type=2 #21
