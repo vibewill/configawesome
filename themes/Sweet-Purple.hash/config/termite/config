@@ -1,0 +1,46 @@
+# old
+
+[options]
+
+font = Monospace 10
+icon_name = terminal
+
+[colors]
+
+# special
+foreground      = #e5b6ea
+foreground_bold = #e5b6ea
+cursor          = #02b4cc
+background      = rgba(24, 27, 40, 0.95)
+
+# black
+color0  = #181b28
+color8  = #8f74bd
+
+# red
+color1  = #713fc3
+color9  = #b899ff
+
+# green
+color2  = #8600cc
+color10 = #a800ff
+
+# yellow
+color3  = #cc335e
+color11 = #f666ff
+
+# blue
+color4  = #001d99
+color12 = #0099cc
+
+# magenta
+color5  = #0066ff
+color13 = #0099ff
+
+# cyan
+color6  = #731387
+color14 = #cc66c8
+
+# white
+color7  = #b915b3
+color15 = #8c10c4

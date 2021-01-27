@@ -1,0 +1,214 @@
+# For the benefit of emacs users: -*- shell-script -*-
+#
+#  _ _____                    __ _
+# (_)___ /    ___ ___  _ __  / _(_) __ _
+# | | |_ \   / __/ _ \| '_ \| |_| |/ _` |
+# | |___) | | (_| (_) | | | |  _| | (_| |
+# |_|____/   \___\___/|_| |_|_| |_|\__, |
+#                                  |___/
+
+# Default modkey
+set $mod Mod4
+
+# Hide titlebar
+new_window pixel
+
+# i3-gaps
+gaps inner 4
+gaps outer 4
+smart_gaps on
+
+default_border pixel 1
+hide_edge_borders smart
+
+# Font for window titles.
+font pango: DejaVu Sans Regular 8
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+# Start a terminal
+bindsym $mod+Return exec termite
+
+# Kill focused window
+bindsym $mod+q kill
+
+# Start rofi
+bindsym $mod+d exec rofi -modi drun -show drun
+
+# Move between windows
+bindsym $mod+j focus left
+bindsym $mod+k focus down
+bindsym $mod+l focus up
+bindsym $mod+semicolon focus right
+
+# Alternatively, you can use the cursor keys:
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# Move focused window
+bindsym $mod+Shift+j move left
+bindsym $mod+Shift+k move down
+bindsym $mod+Shift+l move up
+bindsym $mod+Shift+semicolon move right
+
+# Alternatively, you can use the cursor keys:
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# Split in horizontal orientation
+bindsym $mod+h split h
+
+# Split in vertical orientation
+bindsym $mod+v split v
+
+# Enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen toggle
+
+# Change container layout (stacked, tabbed, toggle split)
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+# Toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+
+# Change focus between tiling / floating windows
+bindsym $mod+space focus mode_toggle
+
+# Focus the parent container
+bindsym $mod+a focus parent
+
+# Name the workspaces
+set $workspace1 "1  "
+set $workspace2 "2  "
+set $workspace3 "3  "
+set $workspace4 "4  "
+set $workspace5 "5  "
+set $workspace6 "6  "
+set $workspace7 "7  "
+set $workspace8 "8  "
+set $workspace9 "9  "
+set $workspace0 "10  "
+
+# Switch to workspace
+bindsym $mod+1 workspace $workspace1
+bindsym $mod+2 workspace $workspace2
+bindsym $mod+3 workspace $workspace3
+bindsym $mod+4 workspace $workspace4
+bindsym $mod+5 workspace $workspace5
+bindsym $mod+6 workspace $workspace6
+bindsym $mod+7 workspace $workspace7
+bindsym $mod+8 workspace $workspace8
+bindsym $mod+9 workspace $workspace9
+bindsym $mod+0 workspace $workspace0
+
+# Move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace $workspace1
+bindsym $mod+Shift+2 move container to workspace $workspace2
+bindsym $mod+Shift+3 move container to workspace $workspace3
+bindsym $mod+Shift+4 move container to workspace $workspace4
+bindsym $mod+Shift+5 move container to workspace $workspace5
+bindsym $mod+Shift+6 move container to workspace $workspace6
+bindsym $mod+Shift+7 move container to workspace $workspace7
+bindsym $mod+Shift+8 move container to workspace $workspace8
+bindsym $mod+Shift+9 move container to workspace $workspace9
+bindsym $mod+Shift+0 move container to workspace $workspace0
+
+## Always open some programs on specified workspace
+#assign [class="firefox"] → $workspace2
+#assign [class="Chromium"] → $workspace2
+#assign [class="chromium"] → $workspace2
+#assign [class="Google-chrome"] → $workspace2
+#assign [class="google-chrome"] → $workspace2
+#assign [class="TelegramDesktop"] → $workspace3
+#assign [class="thunar"] → $workspace4
+#assign [class="Thunar"] → $workspace4
+#assign [class="subl"] → $workspace5
+#assign [class="Subl"] → $workspace5
+#assign [class="geany"] → $workspace5
+#assign [class="Geany"] → $workspace5
+#assign [class="Atom"] → $workspace5
+#assign [class="atom"] → $workspace5
+#assign [class="Gimp"] → $workspace6
+#assign [class="VirtualBox"]    → $workspace8
+
+# Enable float for some windows
+for_window [class="Variety"] floating enable
+for_window [class="Yad"] floating enable
+
+# Reload the configuration file
+bindsym $mod+Ctrl+c reload
+
+# Restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Ctrl+r restart
+
+# Lock screen
+bindsym $mod+x exec power-menu
+
+# Resize window (you can also use the mouse for that)
+mode "resize"
+{
+    # Resize with the arrow keys
+    bindsym Left resize shrink width 2 px or 2 ppt
+    bindsym Down resize grow height 2 px or 2 ppt
+    bindsym Up resize shrink height 2 px or 2 ppt
+    bindsym Right resize grow width 2 px or 2 ppt
+
+    # Back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym $mod+r mode "resize"
+
+# Defining colors
+set $bg      #0c0e14
+set $fg      #c50ed2
+set $fgfoc	 #ffffff
+set $fgnorm  #7e57c2
+set $blue    #02b4cc
+set $gray    #696c6c
+set $white   #ffffff
+
+title_align center
+
+# class                 bord. bg. text  ind.  child_border
+client.focused          $fg   $bg $fg   $bg   $fg
+client.focused_inactive $gray $bg $gray $gray $gray
+client.unfocused        $gray $bg $gray $gray $gray
+client.urgent           $gray $bg $fg   $gray $gray
+client.placeholder      $fg   $bg $fg   $gray $gray
+
+# Start i3blocks to display a workspace bar
+bar
+{
+    position top
+    workspace_buttons yes
+    separator_symbol ""
+	  status_command i3blocks
+	  font pango: DejaVu Sans Regular 9
+	  colors
+	  {
+        #                    Border Background Text
+		    focused_workspace   $blue    $blue    $bg
+		    active_workspace    $bg    $bg    $white
+		    inactive_workspace  $bg    $bg    $fgnorm
+		    urgent_workspace    $bg    $bg    $blue
+		    background          $bg
+    }
+}
+
+
+# Volume
+bindsym XF86AudioRaiseVolume exec --no-startup-id "amixer set Master 5%+ unmute && pkill -RTMIN+2 i3blocks"
+bindsym XF86AudioLowerVolume exec --no-startup-id "amixer set Master 5%- unmute && pkill -RTMIN+2 i3blocks"
+bindsym XF86AudioMute exec --no-startup-id "amixer -q set Master toggle && pkill -RTMIN+2 i3blocks"
+bindsym Mod1+Ctrl+l exec --no-startup-id "betterlockscreen -l dim"
+bindsym Print exec --no-startup-id "h-screenshot"
+
+# Startup programs
+exec_always --no-startup-id "sh ~/.config/i3/startup.sh"

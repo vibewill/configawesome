@@ -1,0 +1,26 @@
+#!/bin/sh
+
+DIR=$(dirname $0)
+echo "Please wait..."
+
+# as root
+pkexec sh -c "rm -rf /root/.gtkrc-2.0;rm -rf /root/.config/gtk-3.0;rm -rf /root/.config/gtk-2.0;cp -r ${DIR}/etc/* /etc/"
+
+# normal
+pkill trayer
+cp -rf /etc/skel/.config/rofi $HOME/.config &> /dev/null
+(pacman -Qi xmonad &> /dev/null) && cp -rf /etc/skel/.xmonad $HOME/ &> /dev/null
+(pacman -Qi i3-gaps &> /dev/null) && cp -rf /etc/skel/.config/i3 $HOME/.config &> /dev/null
+(pacman -Qi i3blocks &> /dev/null) && cp -rf /etc/skel/.config/i3blocks $HOME/.config &> /dev/null
+(pacman -Qi awesome &> /dev/null) && cp -rf /etc/skel/.config/awesome $HOME/.config &> /dev/null
+(pacman -Qi bspwm &> /dev/null) && cp -rf /etc/skel/.config/bspwm $HOME/.config &> /dev/null
+cd ${DIR}
+cp gtkrc-2.0 $HOME/.gtkrc-2.0
+cp -r config/* $HOME/.config/
+(pacman -Qi awesome &> /dev/null) && cp -r awesome $HOME/.config/
+(pacman -Qi i3-gaps &> /dev/null) && cp -r i3 $HOME/.config/
+(pacman -Qi i3blocks &> /dev/null) && cp -r i3blocks $HOME/.config/
+(pacman -Qi xmonad &> /dev/null) && cp -r xmonad/* $HOME/.xmonad/
+(pacman -Qi bspwm &> /dev/null) && cp -r bspwm $HOME/.config/
+
+(pacman -Qi xmonad &> /dev/null) && xmonad --recompile
