@@ -1,2 +1,0 @@
-[2021-01-26 19:32:34.606] [sharedprocess] [info] main {"machineId":"2cfc2c6ec259bf697485593aa5e214389d1ffd9aedd8760db8d18f8cb1812fbb","windowId":2}
-[2021-01-26 19:32:35.426] [sharedprocess] [error] [File Watcher (node.js)] Error: ENOENT: no such file or directory, stat '/home/vibewill/.config/Code/User/snippets'
